@@ -13,6 +13,10 @@
                     <com.soula2.WaTextView android:textStyle="bold" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:text="@string/contacts_help_bullet" style="@style/Text.Steps" />
                     <com.soula2.WaTextView android:layout_width="wrap_content" android:text="Ellen Maria (aka Manga)" style="@style/Text.Steps" />
                 </LinearLayout>
+                <LinearLayout android:gravity="left" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.soula2.WaTextView android:textStyle="bold" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:text="@string/contacts_help_bullet" style="@style/Text.Steps" />
+                    <com.soula2.WaTextView android:layout_width="wrap_content" android:text="José Wender (aka Dreifus)" style="@style/Text.Steps" />
+                </LinearLayout>
             </LinearLayout>
             <com.soula2.WaTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="24.0dip" android:layout_marginTop="14.0dip" android:layout_marginRight="24.0dip" android:layout_marginBottom="2.0dip" android:text="WAGO by Sommer Damous (Soula)" style="?settingsSectionTitleText" />
             <LinearLayout android:orientation="vertical" android:paddingTop="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">

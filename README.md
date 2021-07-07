@@ -75,6 +75,7 @@ Table described mentioned in **Manual Build**, at step 11.
 # Credits
 * [Sidney PEPO (aka sysb1n)](https://sidneypepo.gitlab.io)
 * [Ellen Maria (aka Manga)](https://www.youtube.com/channel/UCZVXjth7uyZS_SydlJ3AWYQ)
+* [José Wender (aka Dreifus)](https://github.com/Dreifus-404)
 * [S;Z Telegram channel subscribers ❤](https://t.me/steinszapp)
 
 > Made in FG Lab (aka Secret Vault)

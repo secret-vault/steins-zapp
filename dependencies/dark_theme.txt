@@ -1,7 +1,7 @@
 cp ./dependencies/dark_theme/default_wallpaper.png ./source/res/drawable-night-hdpi/default_wallpaper.png; 
 cp ./dependencies/dark_theme/default_wallpaper.png ./source/res/drawable-night-xxhdpi/default_wallpaper.png; 
-cp ./dependencies/dark_theme/ib_new_round.9.png ./source/res/drawable-night-xxhdpi/ib_new_round.9.png; 
-cp ./dependencies/dark_theme/ib_new_round.9.png ./source/res/drawable-night-hdpi/ib_new_round.9.png; 
+cp ./dependencies/dark_theme/ib_new_*.png ./source/res/drawable-night-xxhdpi/; 
+cp ./dependencies/dark_theme/ib_new_*.png ./source/res/drawable-night-hdpi/; 
 cp ./dependencies/dark_theme/balloon_incoming_pressed_ext.9.png ./source/res/drawable-night-hdpi/balloon_incoming_pressed_ext.9.png; 
 cp ./dependencies/dark_theme/balloon_incoming_pressed.9.png ./source/res/drawable-night-xhdpi/balloon_incoming_pressed.9.png; 
 cp ./dependencies/dark_theme/balloon_incoming_normal_stkr.9.png ./source/res/drawable-night-xxhdpi/balloon_incoming_normal_stkr.9.png; 
