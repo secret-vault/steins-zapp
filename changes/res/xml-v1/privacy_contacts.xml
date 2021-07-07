@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/wa_go_privacy_contacts"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:cmwmobile="http://schemas.android.com/apk/res/com.soula2">
+    <PreferenceCategory android:title="@string/wa_go_privacy_contacts" />
+    <SwitchPreference android:title="@string/wa_go_privacy_hide_read" android:key="HideReadC" android:summary="@string/wa_go_privacy_hide_read_sum" android:defaultValue="false" />
+    <SwitchPreference android:title="@string/wa_go_privacy_after_blue" android:key="BlueOnReply" android:summary="@string/wa_go_privacy_after_blue_sum" android:dependency="HideReadC" android:defaultValue="false" />
+    <SwitchPreference android:title="@string/wa_go_privacy_hide_receipt" android:key="HideReceiptC" android:summary="@string/wa_go_privacy_hide_receipt_sum" android:defaultValue="false" />
+    <SwitchPreference android:title="@string/wa_go_privacy_hide_play" android:key="HidePlayC" android:summary="@string/wa_go_privacy_hide_play_sum" android:defaultValue="false" />
+    <SwitchPreference android:title="@string/wa_go_privacy_hide_record" android:key="HideRecordC" android:summary="@string/wa_go_privacy_hide_record_Sum" android:defaultValue="false" />
+    <SwitchPreference android:title="@string/wa_go_privacy_hide_compose" android:key="HideComposeC" android:summary="@string/wa_go_privacy_hide_compose_Sum" android:defaultValue="false" />
+</PreferenceScreen>

@@ -1,0 +1,20 @@
+# Release code-name: Zero
+# Release creation date: Tue, 07-06-2021, 04:25 PM -03
+# Changes
+* Added new color scheme. Color codes: `#666666` and `#999999`
+* Added new icons and wallpapers. Location: `dependencies/steins-zapp_logo_files/`
+* Added 5 Steins;Zapp's in `steins-zapp/steins-zapp.zip`
+* Added MIT LICENSE
+* Added `builder.sh` script to build Steins;Zapp
+* Added README.md
+* Added *Infinite Forward* option
+* Added *D-Mail Size* option
+* Added *Text Hang* immunity
+* Added *Link Hang* immunity
+* Added *Contact Hang* immunity
+* Added *Image Hang* immunity
+* Added *File Hang* immunity
+* Added *Location Hang* immunity
+* Added *Catalog Hang* immunity
+
+---

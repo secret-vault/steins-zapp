@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/wa_go_other"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:cmwmobile="http://schemas.android.com/apk/res/com.soula2">
+    <PreferenceCategory android:title="@string/wa_go_name" />
+    <SwitchPreference android:title="@string/wa_go_other_disable_show_dwld_btn" android:key="hide_dwld_btn" android:defaultValue="false" />
+    <SwitchPreference android:title="@string/wa_go_other_show_sticker_alert" android:key="wa_go_other_show_sticker_alert" android:defaultValue="false" />
+    <SwitchPreference android:title="Infinite Forward" android:key="szinfiniteforward" android:summary="[BUTTON NOT WORKING, UNDER DEV] Forward D-Mails for the same contact infinitely" android:defaultValue="true" />
+    <SwitchPreference android:title="D-Mail Size" android:key="szdmailsize" android:summary="[BUTTON NOT WORKING, UNDER DEV] Reduce long text's to a D-Mail default size (36 bytes)" android:defaultValue="true" />
+    <SwitchPreference android:title="Text Hang" android:key="sztexthang" android:summary="[BUTTON NOT WORKING, UNDER DEV] Makes Steins;Zapp immune to text hangs" android:defaultValue="true" />
+    <SwitchPreference android:title="Link Hang" android:key="szlinkhang" android:summary="[BUTTON NOT WORKING, UNDER DEV] Makes Steins;Zapp immune to link hangs" android:defaultValue="true" />
+    <SwitchPreference android:title="Contact Hang" android:key="szcontacthang" android:summary="[BUTTON NOT WORKING, UNDER DEV] Makes Steins;Zapp immune to contact hangs" android:defaultValue="true" />
+    <SwitchPreference android:title="Image Hang" android:key="szimagehang" android:summary="[BUTTON NOT WORKING, UNDER DEV] Makes Steins;Zapp immune to image hangs" android:defaultValue="true" />
+    <SwitchPreference android:title="File Hang" android:key="szfilehang" android:summary="[BUTTON NOT WORKING, UNDER DEV] Makes Steins;Zapp immune to file hangs" android:defaultValue="true" />
+    <SwitchPreference android:title="Location Hang" android:key="szlocationhang" android:summary="[BUTTON NOT WORKING, UNDER DEV] Makes Steins;Zapp immune to location hangs" android:defaultValue="true" />
+    <SwitchPreference android:title="Catalog Hang" android:key="szcataloghang" android:summary="[BUTTON NOT WORKING, UNDER DEV] Makes Steins;Zapp immune to catalog hangs" android:defaultValue="true" />
+</PreferenceScreen>

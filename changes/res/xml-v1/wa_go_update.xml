@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/wa_go_update"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:cmwmobile="http://schemas.android.com/apk/res/com.soula2">
+    <PreferenceCategory android:title="@string/wa_go_update" />
+    <com.ApxSAMods.h7 android:title="@string/wa_go_update_check" android:key="check_upgrade" android:summary="@string/wa_go_update_check_sum" />
+    <Preference android:title="@string/wa_go_update_changelog" android:key="wa_go_update_changelog" android:summary="@string/wa_go_update_changelog_sum" />
+</PreferenceScreen>

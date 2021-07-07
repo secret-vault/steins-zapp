@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/wa_go_privacy_broadcasts"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:cmwmobile="http://schemas.android.com/apk/res/com.soula2">
+    <PreferenceCategory android:title="@string/wa_go_privacy_broadcasts" />
+    <SwitchPreference android:title="@string/wa_go_privacy_hide_read" android:key="HideReadB" android:summary="@string/wa_go_privacy_hide_read_sumB" android:defaultValue="true" />
+    <SwitchPreference android:title="@string/wa_go_privacy_hide_receipt" android:key="HideReceiptB" android:summary="@string/wa_go_privacy_hide_receipt_sumB" android:defaultValue="true" />
+    <SwitchPreference android:title="@string/wa_go_privacy_hide_play" android:key="HidePlayB" android:summary="@string/wa_go_privacy_hide_play_sumB" android:defaultValue="true" />
+</PreferenceScreen>

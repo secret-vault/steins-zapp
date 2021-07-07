@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="stealth_tip_divider">#fff2706a</color>
+    <color name="stealth_tip_bg">#ffef554e</color>
+    <color name="wa_go_eula_primary_button_color">#ff666666</color>
+</resources>

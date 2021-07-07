@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/wa_go_privacy_groups"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:cmwmobile="http://schemas.android.com/apk/res/com.soula2">
+    <PreferenceCategory android:title="@string/wa_go_privacy_groups" />
+    <SwitchPreference android:title="@string/wa_go_privacy_hide_read" android:key="HideReadG" android:summary="@string/wa_go_privacy_hide_read_sumG" android:defaultValue="true" />
+    <SwitchPreference android:title="@string/wa_go_privacy_hide_receipt" android:key="HideReceiptG" android:summary="@string/wa_go_privacy_hide_receipt_sumG" android:defaultValue="true" />
+    <SwitchPreference android:title="@string/wa_go_privacy_hide_play" android:key="HidePlayG" android:summary="@string/wa_go_privacy_hide_play_sumG" android:defaultValue="true" />
+    <SwitchPreference android:title="@string/wa_go_privacy_hide_record" android:key="HideRecordG" android:summary="@string/wa_go_privacy_hide_record_SumG" android:defaultValue="true" />
+    <SwitchPreference android:title="@string/wa_go_privacy_hide_compose" android:key="HideComposeG" android:summary="@string/wa_go_privacy_hide_compose_SumG" android:defaultValue="true" />
+</PreferenceScreen>

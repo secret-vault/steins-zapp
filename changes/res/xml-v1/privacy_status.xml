@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/wa_go_privacy_status"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:cmwmobile="http://schemas.android.com/apk/res/com.soula2">
+    <PreferenceCategory android:title="@string/wa_go_privacy_status" />
+    <SwitchPreference android:title="@string/wa_go_privacy_hide_status" android:key="hide_statusV2" android:summary="@string/wa_go_privacy_hide_status_sum" android:defaultValue="false" />
+    <SwitchPreference android:title="@string/wa_go_privacy_anti_revoke_status" android:key="Antirevoke_status" android:summary="@string/wa_go_privacy_anti_revoke_status_sum" android:defaultValue="true" />
+</PreferenceScreen>
