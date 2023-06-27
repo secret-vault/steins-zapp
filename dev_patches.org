@@ -1,0 +1,286 @@
+* Development patches
+During the development reverse engineering process, unfortunately, it's impossible to simply point to specific ~.smali~ files to all WhatsApp versions, because they are volatile, so, here is the list of S;Z patches with their respective files/regex to find the correct files to patch.
+
+First of all, you should decompile the base APK (use ~dev_builder.sh~ to automate this process) and set ~base_dir~ variable with generated directory's name (it's ~sandbox~ by default)
+#+BEGIN_SRC sh
+  ./dev_builder.sh d
+  
+  base_dir="sandbox"
+#+END_SRC
+After that, now you can study and test each Steins;Zapp patch by comparing the original files (inside ~sandbox/~ directory) with the patched one (inside ~patches/~ directory).
+#+BEGIN_QUOTE
+Read the following topics and subtopics to understand what behavior witch patch produces.
+#+END_QUOTE
+-----
+
+* Immunity patches
+You might be thinking: "what this section is about?". Well, here in Brazil, there are a weird specie called /Trava zappers/, so, those patches are designed to imunize WhatsApp against """attacks""" from those guys. 
+#+BEGIN_QUOTE
+/Trava zapper/, or WhatsApp "hanger" (in english), is a dumb annoying kid (or +40 years old adult) without any good to do, that likes to prank people with bloated messages called /Travas de WhatsApp/, or simply /Travas/, that *can hang* WhatsApp app (and thinks this is hacking and that he is a hacker).
+#+END_QUOTE
+This way, there are lots of WhatsApp hang species. Check them all below with their respective immunity patches. Tip: start with [[Text hang]] before any other.
+
+#+BEGIN_QUOTE
+Fun fact: /Zap/ is a phoneme quickly pronounced by Brazilians to refer to WhatsApp. It's origin is something like /WhatsApp/ -> /AtsApp/ -> /TsAp/ -> /Sap/ (pronounced as /Zap/). That's why /Trava zapper/, is written this way (and if you think that is the reason for "Zapp" in Steins;Zapp name, you are right lol).
+#+END_QUOTE
+
+** Text hang
+Text hangs are messages with a lot of numbers, symbols, emojis, Unicode, emphasis characters and invisible characters. This type of hang is the most common and it's the base for almost all species of hangs, so it's recommended to patch it before any other hang.
+
+There are 3 text hang flavors:
+- [[Generic text hang]]
+- [[Delay hang]]
+- [[Dot hang]]
+#+BEGIN_QUOTE
+If you don't apply all text hang patches, do, at least, the [["Read more" size]], because it will significantly reduces lag in *almost all* hang types. The second most important immunity patch is the [[Generic text hang]], because it's, by far, the most common hang out there.
+#+END_QUOTE
+
+*** "Read more" size
+That isn't exactly a hang to be patched, but, as was said above, before get into any specific text hang, you should apply this patch to get much better results.
+
+**** Post-patch behavior
+Reduces when the "Read more" will appear in the messages, from 768 to 36 characters, making them shorter and much less laggy.
+
+**** Patch
+#+BEGIN_SRC sh
+  for a in $(grep -r -i "conversationrow" ./${base_dir} | cut -d ":" -f 1); do if [[ -n $(grep -i "0x300" $a) ]]; then echo $a; fi; done
+#+END_SRC
+
+*** Generic text hang
+The most common and generic hang that you can find, made with a lot of numbers, symbols, emojis, Unicode, emphasis characters and invisible characters to dedicate the entire WhatsApp reserved memory just to render those messages, causing the hang effect.
+
+**** Post-patch behavior
+Stops rendering emphasized texts and highlights at numbers, mentions and links.
+
+**** Patch
+#+BEGIN_SRC sh
+  for a in $(grep -r -i "monospace" ./${base_dir} | cut -d ":" -f 1); do if [[ -n $(grep -i "0x7db" $a) ]]; then echo $a; fi; done
+
+  grep -r -i "7f0a0ad2" ./${base_dir} # regex is the "monospace" public id
+
+  grep -r -i "u200a\\\\\\\\u205f" ./${base_dir}
+
+  egrep -r -i '"seconds"|" milliseconds"|" nanoseconds "' ./${base_dir}
+
+  grep -r -i '"((?:\\\\' ./${base_dir}
+
+  grep -r -i "s\*=" ./${base_dir}
+#+END_SRC
+
+*** Delay hang
+A message with a huge amount of invisible characters (usually) that slows message receiving (and sending) processment.
+
+**** Post-patch behavior
+Skips the entire instruction-set of two methods responsible for reading and expanding a large message data at its receive (and send).
+
+**** Patch
+#+BEGIN_SRC sh
+  grep -r -i "insert into messages(" ./${base_dir}
+
+  grep -r -i "(@\\\\\\\\" ./${base_dir}
+#+END_SRC
+
+*** Dot hang
+It's like a fusion between generic text hangs and delay hangs. The messages usually contais just a dot and lots of invisible characters that, although now a days it's considered a "deprecated hang", it still can lag the app (usually on iOS devices) and delay message sending.
+
+**** Post-patch behavior
+Skips the condicional verification to receive (or send) messages to a user even if WhatsApp doesn't has its respective JID.
+
+**** Patch
+#+BEGIN_SRC sh
+  grep -r -i "sender receipts" ./${base_dir}
+#+END_SRC
+
+** Contact hang
+Basically a bloated vCard, filled with lots of symbols, emojis and Unicode characters (can be also filled with pre-existing text hangs) that cause the same text hang effect, but more laggy.
+
+*** Post-patch behavior
+Skips the vCard information parsing and rendering instruction-set (except the contacts amount). Note: vCard information still can be read on WhatsApp Web.
+
+*** Patch
+#+BEGIN_SRC sh
+  grep -r -i "END:VCARD)" ./${base_dir}
+
+  grep -r -i "LX/1qM;->A01(Ljava/lang/String;LX/1qN;)V" ./${base_dir} # ".class public" of last regex search + "->" + ".method public" of virtual methods
+#+END_SRC
+
+** Media hang
+Images, videos and even GIF's that has extremely high resolutions to consume too much processing at preview thumbnail reading and generation (and, sometimes, they have a text hang on message description and/or media file name).
+
+*** Post-patch behavior
+Returns a "null" value before the process of reading and generating medias thumbnail, resulting in presenting a default WhatsApp thumbnail.
+
+*** Patch
+#+BEGIN_SRC sh
+  grep -r -i "image-thumb" ./${base_dir}
+#+END_SRC
+
+** File hang
+WhatsApp can generate a preview thumbnail for certain file types (like PDF's), so, using the same media hang principle, those files has extremely high resolution content to use lots of processing when it try to read and generate preview thumbnails.
+
+*** Post-patch behavior
+Reduces files preview thumbnail area on length.
+
+*** Patch
+~./${base_dir}/res/layout/conversation_row_document_left.xml~
+~./${base_dir}/res/layout/conversation_row_document_right.xml~
+
+** Location hang
+It's a random location sharing, but with the place information, like name and street, filled with symbols, emojis, Unicode characters and, sometimes, text hangs, acting like contact hangs, but even more powerful, because of bloated place information and map rendering.
+
+*** Post-patch behavior
+Reduces place information area size to zero on height and width.
+
+*** Patch
+~./${base_dir}/res/layout/conversation_row_location_left_large.xml~
+~./${base_dir}/res/layout/conversation_row_location_right_large.xml~
+~./${base_dir}/res/layout/conversation_row_location_popup.xml~
+~./${base_dir}/res/values/dimens.xml~
+
+** Catalog hang
+This one uses the same location hang principle, but the bloated texts are filling catalog product information, instead place information, causing similar effects to the media hangs.
+
+*** Post-patch behavior
+Skips the catalog product information return.
+
+*** Patch
+#+BEGIN_SRC sh
+  for a in $(grep -r -i "viewmessage/ from_me:" ./${base_dir} | cut -d ":" -f 1); do if [[ -n $(grep -i "textemojilabel;->" $a) ]]; then if [[ -n $(grep -i "charsequence;Ljava" $a) ]]; then echo $a; fi; fi; done
+#+END_SRC
+
+** Link preview hang
+Also known as /webpage preview hang/ or simply /webpage hang/, this one is a message with a link that can be previewed and, in its displayed preview, title, description and/or URL contains symbols, emojis and Unicode characters that causes similar effects to text hangs.
+
+*** Post-patch behavior
+Reduces place location information area size to zero on length.
+
+*** Patch
+~./${base_dir}/res/layout/web_page_preview_image_and_content.xml~
+
+** Cart hang - FIXED (finally!!)
+By far, this was the most powerful one: it's a random text message, but with ~44~ in its ~media_wa_type~ ID, that is, this message will be interpreted as a orders cart, but without any order or data, *crashing* the app instantly, just by opening a chat with it. By the way, seems that WhatsApp devs identified this serious issue and fixed it, so you don't need to (and shouldn't) patch this hang anymore and, if you try, app crashes will back (I know, because I've tested xd).
+
+*** Post-patch behavior
+Skips the entire instruction-set of orders cart information parsing.
+#+BEGIN_QUOTE
+After the official fix of this hang, the post-patch behavior basically turned itself into the original cart hang crash effect, so, again, don't do it lol.
+#+END_QUOTE
+
+*** Patch
+#+BEGIN_SRC sh
+  grep -r -i ", 0x7f120bc1" ./${base_dir} # regex is the "message_order_cta_business" public id
+#+END_SRC
+-----
+
+* Feature patches
+All S;Z features (besides its immunities) are here, from functionalities to themes. Note: WhatsApp Go (S;Z base) has a lot of built in features (e.g. pin up to 35 chats and forward messages up to 180 chats) that can be enabled in its menus.
+
+** Obsolescence
+If WhatsApp doesn't get updated regularly, the installed version will stop working after some time (months), asking for the update.
+
+*** Post-patch behavior
+Extends the current installed WhatsApp version util life.
+
+*** Patch
+#+BEGIN_SRC sh
+  grep -r -i "number format not valid" ./${base_dir}
+#+END_SRC
+** Instant send
+When you send messages quickly, there is a queue that acts analyzing send jobs to send just one message at time.
+
+*** Post-patch behavior
+Skips jobs queue, sending messages instantly, without any delay.
+
+*** Patch
+#+BEGIN_SRC sh
+  grep -r -i ', "ReadyJobsProducer"' ./${base_dir}
+#+END_SRC
+** Infinite forward
+By default, when you forward messages in to the same chat, they are desselect after being sent.
+
+*** Post-patch behavior
+Skips the deselecting message instruction.
+
+*** Patch
+#+BEGIN_SRC sh
+  grep -r -i "conversation/forward/failed" ./${base_dir}
+#+END_SRC
+** Long voice notes
+At the voice notes bottom, there is its duration, measured in seconds, minutes and, even, hours.
+
+*** Post-patch behavior
+Reduces the time measure units reference values ​​to 1, causing a voice note duration spoof.
+
+*** Patch
+#+BEGIN_SRC sh
+  grep -r -i "voicenote/stopvoicenote duration" ./${base_dir}
+#+END_SRC
+
+** Steins;Zapp theme
+This is the last, but most obvious feature: the S;Z custom theme.
+
+It's divided in two parts:
+- [[Strings]], responsible for changing most app words and texts, and
+- [[Colors]], responsible for change the S;Z color schemes (check out [[file:visual_identity/color_schemes.org][ ~visual_identity/color_schemes.org~ ]] to meet colors used)
+
+*** Strings
+Below is the keyword list to be replaced. Strings files are ~./${base_dir}/res/values/strings.xml~ and ~./${base_dir}/res/values-v1/strings.xml~.
+
+#+BEGIN_SRC text
+  default_about_text
+  status_default_at_gym
+  Welcome to WhatsApp
+  WhatsApp
+  app_name
+  launcher_app_name
+  Message
+   message
+  "message"
+  settingDisabled_system
+  Steins;Zapp Business
+  Facebook
+  Instagram
+  Steins;Zapp Messenger
+  Messenger
+  Steins;Zapp Inc.
+  Steins;Zapp Support
+  Steins;Zapp secures
+  From Meta
+  Meta
+  Google
+  are private
+  are end
+  No one outside of this chat, not even Steins;Zapp can read
+  Steins;Zapp and third parties can't read
+  Steins;Zapp cannot
+  third parties can't
+  can't be seen by businesses or Steins;Zapp
+  Read our
+  read our
+  Steins;Zapp's terms
+#+END_SRC
+*** Colors
+Below is the color code list to be replaced. Colors files are ~./${base_dir}/res/values/colors.xml~ and ~./${base_dir}/res/values-night/colors.xml~.
+
+**** Accent (links, read tint, etc.)
+#+BEGIN_SRC text
+  027eb5
+  009de2
+#+END_SRC
+**** Dark main (light theme)
+#+BEGIN_SRC text
+  25d366
+  008069
+  splash
+  125c4e
+#+END_SRC
+**** Bright main (dark theme)
+#+BEGIN_SRC text
+  00a884
+  111b21
+  202c33
+  splash
+  8696a0
+  182229
+  setting_icon
+#+END_SRC

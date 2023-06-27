@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:id="@id/scroll_view" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/horizontal_padding" android:paddingTop="6.0dip" android:paddingRight="@dimen/horizontal_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.soula2.WaTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="24.0dip" android:layout_marginTop="14.0dip" android:layout_marginRight="24.0dip" android:layout_marginBottom="2.0dip" android:text="@string/wa_go_by" style="?settingsSectionTitleText" />
+            <LinearLayout android:orientation="vertical" android:paddingTop="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+				<LinearLayout android:gravity="left" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.soula2.WaTextView android:textStyle="bold" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:text="@string/contacts_help_bullet" style="@style/Text.Steps" />
+                    <com.soula2.WaTextView android:layout_width="wrap_content" android:text="Sidney PEPO (aka sysb1n)" style="@style/Text.Steps" />
+                </LinearLayout>
+				<LinearLayout android:gravity="left" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.soula2.WaTextView android:textStyle="bold" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:text="@string/contacts_help_bullet" style="@style/Text.Steps" />
+                    <com.soula2.WaTextView android:layout_width="wrap_content" android:text="Ellen Manga" style="@style/Text.Steps" />
+                </LinearLayout>
+				<LinearLayout android:gravity="left" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.soula2.WaTextView android:textStyle="bold" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:text="@string/contacts_help_bullet" style="@style/Text.Steps" />
+                    <com.soula2.WaTextView android:layout_width="wrap_content" android:text="José Wender (aka Dreifus)" style="@style/Text.Steps" />
+                </LinearLayout>
+			</LinearLayout>
+			<LinearLayout android:orientation="vertical" android:paddingTop="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:gravity="left" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.soula2.WaTextView android:textStyle="bold" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:text="@string/contacts_help_bullet" style="@style/Text.Steps" />
+                    <com.soula2.WaTextView android:layout_width="wrap_content" android:text="Atnfas hoak(Omar)" style="@style/Text.Steps" />
+                </LinearLayout>
+                <LinearLayout android:gravity="left" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.soula2.WaTextView android:textStyle="bold" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:text="@string/contacts_help_bullet" style="@style/Text.Steps" />
+                    <com.soula2.WaTextView android:layout_width="wrap_content" android:text="Yousef Al-Basha" style="@style/Text.Steps" />
+                </LinearLayout>
+                <LinearLayout android:gravity="left" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.soula2.WaTextView android:textStyle="bold" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:text="@string/contacts_help_bullet" style="@style/Text.Steps" />
+                    <com.soula2.WaTextView android:layout_width="wrap_content" android:text="LOU 🖤🌻" style="@style/Text.Steps" />
+                </LinearLayout>
+                <LinearLayout android:gravity="left" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.soula2.WaTextView android:textStyle="bold" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:text="@string/contacts_help_bullet" style="@style/Text.Steps" />
+                    <com.soula2.WaTextView android:layout_width="wrap_content" android:text="KaramLord" style="@style/Text.Steps" />
+                </LinearLayout>
+                <LinearLayout android:gravity="left" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.soula2.WaTextView android:textStyle="bold" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:text="@string/contacts_help_bullet" style="@style/Text.Steps" />
+                    <com.soula2.WaTextView android:layout_width="wrap_content" android:text="B58" style="@style/Text.Steps" />
+                </LinearLayout>
+                <LinearLayout android:gravity="left" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.soula2.WaTextView android:textStyle="bold" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:text="@string/contacts_help_bullet" style="@style/Text.Steps" />
+                    <com.soula2.WaTextView android:layout_width="wrap_content" android:text="Fouad Mokdad" style="@style/Text.Steps" />
+                </LinearLayout>
+                <LinearLayout android:gravity="left" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.soula2.WaTextView android:textStyle="bold" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:text="@string/contacts_help_bullet" style="@style/Text.Steps" />
+                    <com.soula2.WaTextView android:layout_width="wrap_content" android:text="DevSaif" style="@style/Text.Steps" />
+                </LinearLayout>
+                <LinearLayout android:gravity="left" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.soula2.WaTextView android:textStyle="bold" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:text="@string/contacts_help_bullet" style="@style/Text.Steps" />
+                    <com.soula2.WaTextView android:layout_width="wrap_content" android:text="OM7753" style="@style/Text.Steps" />
+                </LinearLayout>
+                <LinearLayout android:gravity="left" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.soula2.WaTextView android:textStyle="bold" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:text="@string/contacts_help_bullet" style="@style/Text.Steps" />
+                    <com.soula2.WaTextView android:layout_width="wrap_content" android:text="Deltalabs" style="@style/Text.Steps" />
+                </LinearLayout>
+            </LinearLayout>
+            <com.soula2.WaTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="24.0dip" android:layout_marginTop="14.0dip" android:layout_marginRight="24.0dip" android:layout_marginBottom="2.0dip" android:text="@string/wa_go_about_testers" style="?settingsSectionTitleText" />
+            <LinearLayout android:orientation="vertical" android:paddingTop="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:gravity="left" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.soula2.WaTextView android:textStyle="bold" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:text="@string/contacts_help_bullet" style="@style/Text.Steps" />
+                    <com.soula2.WaTextView android:layout_width="wrap_content" android:text="DevSaif" style="@style/Text.Steps" />
+                </LinearLayout>
+                <LinearLayout android:gravity="left" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.soula2.WaTextView android:textStyle="bold" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:text="@string/contacts_help_bullet" style="@style/Text.Steps" />
+                    <com.soula2.WaTextView android:layout_width="wrap_content" android:text="Omar Rasheed" style="@style/Text.Steps" />
+                </LinearLayout>
+                <LinearLayout android:gravity="left" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.soula2.WaTextView android:textStyle="bold" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:text="@string/contacts_help_bullet" style="@style/Text.Steps" />
+                    <com.soula2.WaTextView android:layout_width="wrap_content" android:text="MRD" style="@style/Text.Steps" />
+                </LinearLayout>
+            </LinearLayout>
+            <com.soula2.WaTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="24.0dip" android:layout_marginTop="14.0dip" android:layout_marginRight="24.0dip" android:layout_marginBottom="2.0dip" android:text="@string/wa_go_about_trans" style="?settingsSectionTitleText" />
+            <LinearLayout android:orientation="vertical" android:paddingTop="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:gravity="left" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.soula2.WaTextView android:textStyle="bold" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:text="@string/contacts_help_bullet" style="@style/Text.Steps" />
+                    <com.soula2.WaTextView android:layout_width="wrap_content" android:text="Sedra AL Hariri (Arabic)" style="@style/Text.Steps" />
+                </LinearLayout>
+                <LinearLayout android:gravity="left" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.soula2.WaTextView android:textStyle="bold" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:text="@string/contacts_help_bullet" style="@style/Text.Steps" />
+                    <com.soula2.WaTextView android:layout_width="wrap_content" android:text="Nour Al Houssein (Arabic)" style="@style/Text.Steps" />
+                </LinearLayout>
+                <LinearLayout android:gravity="left" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.soula2.WaTextView android:textStyle="bold" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:text="@string/contacts_help_bullet" style="@style/Text.Steps" />
+                    <com.soula2.WaTextView android:layout_width="wrap_content" android:text="XchunchunmaruX (Indonesian)" style="@style/Text.Steps" />
+                </LinearLayout>
+                <LinearLayout android:gravity="left" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.soula2.WaTextView android:textStyle="bold" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:text="@string/contacts_help_bullet" style="@style/Text.Steps" />
+                    <com.soula2.WaTextView android:layout_width="wrap_content" android:text="KevynLucas (Portuguese - Brazil)" style="@style/Text.Steps" />
+                </LinearLayout>
+                <LinearLayout android:gravity="left" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.soula2.WaTextView android:textStyle="bold" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:text="@string/contacts_help_bullet" style="@style/Text.Steps" />
+                    <com.soula2.WaTextView android:layout_width="wrap_content" android:text="Osmel Naranjo (Spanish - Cuba)" style="@style/Text.Steps" />
+                </LinearLayout>
+                <LinearLayout android:gravity="left" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.soula2.WaTextView android:textStyle="bold" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:text="@string/contacts_help_bullet" style="@style/Text.Steps" />
+                    <com.soula2.WaTextView android:layout_width="wrap_content" android:text="Blue Sky (Persian)" style="@style/Text.Steps" />
+                </LinearLayout>
+                <LinearLayout android:gravity="left" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.soula2.WaTextView android:textStyle="bold" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:text="@string/contacts_help_bullet" style="@style/Text.Steps" />
+                    <com.soula2.WaTextView android:layout_width="wrap_content" android:text="luigieiro (Portuguese - Brazil)" style="@style/Text.Steps" />
+                </LinearLayout>
+                <LinearLayout android:gravity="left" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.soula2.WaTextView android:textStyle="bold" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:text="@string/contacts_help_bullet" style="@style/Text.Steps" />
+                    <com.soula2.WaTextView android:layout_width="wrap_content" android:text="Unknown Modder (Hindi)" style="@style/Text.Steps" />
+                </LinearLayout>
+                <LinearLayout android:gravity="left" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.soula2.WaTextView android:textStyle="bold" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:text="@string/contacts_help_bullet" style="@style/Text.Steps" />
+                    <com.soula2.WaTextView android:layout_width="wrap_content" android:text="Joel Montoya (Spanish)" style="@style/Text.Steps" />
+                </LinearLayout>
+                <LinearLayout android:gravity="left" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.soula2.WaTextView android:textStyle="bold" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:text="@string/contacts_help_bullet" style="@style/Text.Steps" />
+                    <com.soula2.WaTextView android:layout_width="wrap_content" android:text="TheFULL (Spanish)" style="@style/Text.Steps" />
+                </LinearLayout>
+                <LinearLayout android:gravity="left" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.soula2.WaTextView android:textStyle="bold" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:text="@string/contacts_help_bullet" style="@style/Text.Steps" />
+                    <com.soula2.WaTextView android:layout_width="wrap_content" android:text="Clebson Leite (Portuguese - Brazil)" style="@style/Text.Steps" />
+                </LinearLayout>
+                <LinearLayout android:gravity="left" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.soula2.WaTextView android:textStyle="bold" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:text="@string/contacts_help_bullet" style="@style/Text.Steps" />
+                    <com.soula2.WaTextView android:layout_width="wrap_content" android:text="Andika Tulus Pangestu (Indonesian)" style="@style/Text.Steps" />
+                </LinearLayout>
+                <LinearLayout android:gravity="left" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.soula2.WaTextView android:textStyle="bold" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:text="@string/contacts_help_bullet" style="@style/Text.Steps" />
+                    <com.soula2.WaTextView android:layout_width="wrap_content" android:text="Neory Collins (Spanish -Mexico)" style="@style/Text.Steps" />
+                </LinearLayout>
+                <LinearLayout android:gravity="left" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.soula2.WaTextView android:textStyle="bold" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:text="@string/contacts_help_bullet" style="@style/Text.Steps" />
+                    <com.soula2.WaTextView android:layout_width="wrap_content" android:text="yusufemr3 (Turkish)" style="@style/Text.Steps" />
+                </LinearLayout>
+                <LinearLayout android:gravity="left" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.soula2.WaTextView android:textStyle="bold" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:text="@string/contacts_help_bullet" style="@style/Text.Steps" />
+                    <com.soula2.WaTextView android:layout_width="wrap_content" android:text="Himansu (Odia - India)" style="@style/Text.Steps" />
+                </LinearLayout>
+                <LinearLayout android:gravity="left" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.soula2.WaTextView android:textStyle="bold" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:text="@string/contacts_help_bullet" style="@style/Text.Steps" />
+                    <com.soula2.WaTextView android:layout_width="wrap_content" android:text="Sahil Ansari  (Hindi)" style="@style/Text.Steps" />
+                </LinearLayout>
+                <LinearLayout android:gravity="left" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.soula2.WaTextView android:textStyle="bold" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:text="@string/contacts_help_bullet" style="@style/Text.Steps" />
+                    <com.soula2.WaTextView android:layout_width="wrap_content" android:text="Pramesti Putri (Indonesian)" style="@style/Text.Steps" />
+                </LinearLayout>
+                <LinearLayout android:gravity="left" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.soula2.WaTextView android:textStyle="bold" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:text="@string/contacts_help_bullet" style="@style/Text.Steps" />
+                    <com.soula2.WaTextView android:layout_width="wrap_content" android:text="Rock Bhaskar (Hindi)" style="@style/Text.Steps" />
+                </LinearLayout>
+                <LinearLayout android:gravity="left" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.soula2.WaTextView android:textStyle="bold" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:text="@string/contacts_help_bullet" style="@style/Text.Steps" />
+                    <com.soula2.WaTextView android:layout_width="wrap_content" android:text="LK MODS (pt-rBR)" style="@style/Text.Steps" />
+                </LinearLayout>
+                <LinearLayout android:gravity="left" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.soula2.WaTextView android:textStyle="bold" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:text="@string/contacts_help_bullet" style="@style/Text.Steps" />
+                    <com.soula2.WaTextView android:layout_width="wrap_content" android:text="MrNobodyDK (pt-rBR)" style="@style/Text.Steps" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

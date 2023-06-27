@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/wa_go_privacy_general"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:cmwmobile="http://schemas.android.com/apk/res/com.soula2">
+    <PreferenceCategory android:title="@string/wa_go_privacy_general" />
+    <SwitchPreference android:title="@string/wa_go_privacy_hide_seen" android:key="HideSeen" android:summary="@string/wa_go_privacy_hide_seen_sum" android:defaultValue="false" />
+    <SwitchPreference android:title="@string/wa_go_privacy_anti_revoke" android:key="Antirevoke" android:summary="@string/wa_go_privacy_anti_revoke_sum" android:defaultValue="false" />
+    <SwitchPreference android:title="@string/wa_go_privacy_always_online" android:key="always_online_check" android:summary="@string/wa_go_privacy_always_online_summary" android:defaultValue="false" />
+    <SwitchPreference android:title="@string/wa_go_privacy_hide_tag" android:key="hidefwd" android:summary="@string/wa_go_privacy_hide_tag_sum" android:defaultValue="false" />
+    <SwitchPreference android:title="@string/wa_go_privacy_anti_view_once" android:key="anti_once_v2" android:defaultValue="false" />
+</PreferenceScreen>

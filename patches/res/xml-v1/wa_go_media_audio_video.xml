@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/wa_go_media_audio_video" xmlns:robobunny="http://robobunny.com"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:cmwmobile="http://schemas.android.com/apk/res/com.soula2">
+    <PreferenceCategory android:title="@string/wa_go_media_audio" />
+    <SwitchPreference android:title="@string/wa_go_media_disable_sensor" android:key="wa_go_media_sensor" android:summary="@string/wa_go_media_disable_sensor_sum" android:defaultValue="false" />
+    <SwitchPreference android:title="@string/wa_go_media_disable_sensor_x2" android:key="wa_go_media_disable_sensor_x2" android:summary="@string/wa_go_media_disable_sensor_x2_summary" android:dependency="wa_go_media_sensor" android:defaultValue="false" />
+    <SwitchPreference android:title="@string/wa_go_media_disable_audio_heads" android:key="wa_go_media_voice" android:summary="@string/wa_go_media_disable_audio_heads_sum" android:defaultValue="false" />
+    <SwitchPreference android:title="@string/wa_go_media_play_auto" android:key="wa_go_media_disable_auto_play" android:defaultValue="false" />
+    <com.ApxSAMods.utils.2019_8_25.SeekBarPreference android:max="100" android:title="@string/wa_go_media_audio_upload_size_limit" android:key="wa_go_media_audio_size_limit_check" android:summary="@string/wa_go_media_audio_upload_size_limit_sum" android:defaultValue="16" robobunny:min="16" robobunny:unitsLeft="" robobunny:unitsRight="MB" />
+    <PreferenceCategory android:title="@string/wa_go_media_video" />
+    <com.ApxSAMods.utils.2019_8_25.SeekBarPreference android:max="100" android:title="@string/wa_go_media_video_size" android:key="wa_go_media_video_size_limit_check" android:summary="@string/wa_go_media_video_size_summary" android:defaultValue="50" robobunny:min="16" robobunny:unitsLeft="" robobunny:unitsRight="MB" />
+    <ListPreference android:entries="@array/video_player_array" android:title="@string/wa_go_media_video_player" android:key="wa_go_media_video_player_check" android:defaultValue="0" android:entryValues="@array/video_player_values" />
+</PreferenceScreen>

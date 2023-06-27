@@ -1,0 +1,22 @@
+#+title: README
+#+author: Sidney PEPO (aka sysb1n)
+#+date: [2023-06-27 Tue]
+
+#+begin_center
+#+HTML: <p align="center"><img src="visual_identity/0.png" alt="Steins;Zapp logo" height="150"><p>
+#+end_center
+
+* Steins;Zapp D-Mailer
+It's hard to announce that, after 2 years of development, this project will be terminated and closed here. The two main reasons are:
+
+1. The Steins;Zapp base apk (~com.soula2~) isn't updated very often: everyone who uses Steins;Zapp can't use it for a long period due to the lack of updates (WhatsApp obliges you to use it always in the latest version); and
+2. WhatsApp keeps *offuscating* and *bloating* its own code in *EVERY SINGLE UPDATE*: this makes the Steins;Zapp updates nearly *impossible* to do and maintain;
+
+Some day a Steins;Zapp "descendent" may be developed, but this isn't a promise. We apologize and we hope this project was so important to you as it was for us.
+-----
+
+#+begin_quote
+Made in [[https://matrix.to/#/#secret-vault:matrix.thisisjoes.site][FG Lab (aka Secret Vault)]]
+#+end_quote
+
+/~ El Psy Kongroo/

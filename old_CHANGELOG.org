@@ -1,0 +1,51 @@
+* Release: Makise Kurisu
+** Release date: [2022-07-25]
+** Changes
+- Updated ~com.soula2_v0.22.6L.apk~ (WhatsApp Go - S;Z base APK)
+- Updated and added ~dependencies/~ tools (ADB, APKTool, zipalign, apksigner)
+- Added ~dev_builder.sh~ (development script)
+- Improved /text hang/ immunity
+- Updated /contact hang/ immunity
+- Updated /media hang/ immunity
+- Updated /file hang/ immunity
+- Updated /location hang/ immunity
+- Updated /catalog hang/ immunity
+- Added /link preview hang/ immunity
+- Added /cart hang/ immunity
+- Updated and improved /obsolescence/ feature
+- Added /instant send/ feature
+- Updated /infinite forward/ feature
+- Added /long voice notes/ feature
+- Added ~dev_builds/~ and ~dev_builds/com.steinszapp*_dev_build.apk~ (development builds)
+- Updated ~visual_identity/*~ (all Steins;Zapp themes and themes information)
+- Updated ~dependencies/*_theme/~ and ~dependencies/general/~ (theme images)
+- Added /Makise Kurisu theme/ feature
+- Updated and improved ~dependencies/value_list.sh~ (dependency)
+- Updated and improved ~dependencies/light_theme.sh~ (dependency)
+- Updated and improved ~dependencies/dark_theme.sh~ (dependency)
+- Updated and improved ~dependencies/general.sh~ (dependency)
+- Updated and improved ~builder.sh~ (build script)
+- Updated and improved ~README.org~ (project documentation)
+- Updated and improved ~dev_patches.org~ (patch development documentation)
+- Updated and improved ~CHANGELOG.org~ (this file)
+- Updated and improved ~steins-zapp/*~ (Steins;Zapp Makise Kurisu release builds)
+-----
+
+* Release: Zero
+** Release date: [2021-07-07]
+** Changes
+- Added new color scheme
+- Added new icons and wallpapers
+- Added 5 Steins;Zapp builds
+- Added MIT LICENSE
+- Added ~builder.sh~ script to build Steins;Zapp
+- Added README.md
+- Added /infinite forward/ feature
+- Added /D-Mail size/ feature
+- Added /text hang/ immunity
+- Added /link hang/ immunity
+- Added /contact hang/ immunity
+- Added /image hang/ immunity
+- Added /file hang/ immunity
+- Added /location hang/ immunity
+- Added /catalog hang/ immunity

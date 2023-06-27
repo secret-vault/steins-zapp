@@ -1,0 +1,13 @@
+* Color schemes
+List of the colors used in each release scheme.
+
+** Makise Kurisu
+- Accent (links, read tint, etc.): ~#9933ff~ or ~#93f~
+- Dark main (light theme): ~#880000~ or ~#800~
+- Bright main (dark theme): ~#ff2222~ or ~#f22~
+-----
+
+** Zero
+- Accent (links, read tint, etc.): ~#7106fc~
+- Dark main (light theme): ~#666666~ or ~#666~
+- Bright main (dark theme): ~#999999~ or ~#999~
